@@ -1,0 +1,143 @@
+\documentclass[a4paper,11pt]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} % Change to 'danish' if preferred
+\usepackage{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% --- Page Geometry ---
+\geometry{
+    top=3cm,
+    bottom=3cm,
+    left=2.5cm,
+    right=2.5cm
+}
+
+% --- Python Code Style ---
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{filename.png}
+%     \caption{Description of the image}
+%     \label{fig:example}
+% \end{figure}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% --- Document Info ---
+\title{Week 1: Modellering og Løsning af Optimeringsproblemer}
+\author{Thomas} 
+\date{\today}
+% No indent
+\setlength\parindent{0pt}
+\begin{document}
+
+\maketitle
+
+\section*{LP-1}
+
+We are given the respective sales prices of three products A, B and C:
+\begin{itemize}
+    \item Product A: 8 DKK
+    \item Product B: 16 DKK
+    \item Product C: 12 DKK
+\end{itemize}
+We have the restrictions on material usage:
+\begin{equation}
+    R_1 \leq 150, \quad R_2 \leq 170, \quad R_3 \leq 120, \quad R_4 \leq 140
+\end{equation}
+Naturally, we also have the non-negativity constraints:
+\begin{equation}
+    R_1, R_2, R_3, R_4 \geq 0
+\end{equation}
+The sales values function can be expressed as:
+\begin{equation}
+    \text{Sales Value} = 8A + 16B + 12C
+\end{equation}
+Let $P$ be the price vector for each of the materials $R_i$:
+\begin{equation}
+    p = \begin{bmatrix} 0.3 \\ 0.7 \\ 0.4 \\ 0.8 \end{bmatrix}
+\end{equation}
+The material usage constraints can be expressed in matrix form as:
+\begin{equation}
+    M = \begin{bmatrix}
+    0 & 3 & 2 \\
+    2 & 5 & 4 \\
+    3 & 1 & 2 \\
+    2 & 4 & 3    \end{bmatrix}
+    \end{equation}
+    Where the rows correspond to the materials $R_1, R_2, R_3, R_4$ and the columns correspond to products A, B and C respectively.\\
+
+Let $x$ be the vector of products:
+\begin{equation}
+    x = \begin{bmatrix} A \\ B \\ C \end{bmatrix}
+\end{equation}
+Then we can express spending on materials as:
+\begin{equation}
+\text{Spending} = p^T M x
+\end{equation}
+and thus profit can be expressed as:
+\begin{equation}
+\text{Profit} = \text{Sales Value} - \text{Spending} = 8A + 12B + 16C - p^T M x
+\end{equation}
+We can now formulate the optimization problem as as a three decision variable linear programming problem:
+\begin{equation}
+\text{Maximize } z = 8A + 12B + 16C - p^T M x
+\end{equation}
+Subject to:
+% Make aligned equations for constraints
+\begin{equation}
+\begin{aligned}
+    0A + 3B + 2C &\leq 150 \\
+    2A + 5B + 4C &\leq 170 \\
+    3A + 1B + 2C &\leq 120 \\
+    2A + 4B + 3C &\leq 140 \\
+    A, B, C &\geq 0
+\end{aligned}
+\end{equation}
+We get an optimal solution of:
+\begin{equation}
+    A = 10, \quad B = 30, \quad C = 0
+\end{equation}
+With a maximum profit of:
+\begin{equation}
+    \text{Profit} = 278 \text{ DKK}
+\end{equation}
+Note we can also reformulate this problem to a 7 decision variable linear programming problem by price variables for each product. Then we condition on the prices being lower than what we can aquire the materials for. This has the advantage the out solution will also provide the expenses for each material.
+
+
+
+
+\subsection*{Python Code}
+\lstinputlisting[language = Python]{LP1.py}
+
+
+\end{document}

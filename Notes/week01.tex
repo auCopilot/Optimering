@@ -1,0 +1,48 @@
+\subsection{Key features of a Linear Programming model}
+There are are three main feature of importance in t linear programming (LP) model. These are:
+\begin{itemize}
+    \item A linear objective function that needs to be maximized or minimized.
+    \item A set of linear constraints that restrict the values of the decision variables. These maybe equalities or inequalities.
+    \item Detemination of the coefficients in the objective function.
+\end{itemize}
+Models has to reflect the system that they are trying to represent. It is important to consider things like non-negativity constraints or if the variables can take on fractional values, as these often reflect real-world limitations.
+
+\subsection{Motivations for using a model}
+\begin{itemize}
+    \item \textbf{Costs:} Experimenting with reality can be very expensive, e.g., regarding the location of a factory.
+    \item \textbf{Time:} Conducting experiments in practice is very time-consuming.
+    \item \textbf{Repetition:} It may be necessary to conduct many repetitions to reduce statistical uncertainty. This is both expensive and time-consuming.
+    \item \textbf{Danger:} There may be significant dangers in the modeled reality, e.g., bridge collapses or aircraft collisions.
+    \item \textbf{Legality:} A model can, for example, be used to predict the effects of changing legislation.
+\end{itemize}
+
+\subsection{Formation of a slack variable}
+A slack variable is introduces to simplify inequalities in constraints. For example, suppose we have the following constraint:
+\begin{equation}
+    \sum_{i=1}^{n} a_i x_i \leq b_1
+\end{equation}
+and 
+\begin{equation}
+    \sum_{i=1}^{n} a_i x_i \geq b_2.
+\end{equation}
+This yeilds the combined constraint:
+\begin{equation}
+    b_2 \leq \sum_{i=1}^{n} a_i x_i \leq b_1. 
+\end{equation}
+To convert this into an equation, we can introduce a slack variable \( s \geq 0 \). We first look at the upper bound, which we can transform into and equality by defining the slack variable as:   
+\begin{equation}
+    s = b_1 - \sum_{i=1}^{n} a_i x_i.
+\end{equation}
+Then, we take the lower bound inequality and use that $ \sum_{i=1}^{n} a_i x_i = b_1 - s $, by definition, to get:
+\begin{equation}
+    b_2 \leq b_1 - s \implies 0 \leq s \leq b_1 - b_2.
+\end{equation}
+This forms the equivalent constraints:
+\begin{equation}
+    \sum_{i=1}^{n} a_i x_i + s = b_1,
+\end{equation}
+with
+\begin{equation}
+    0 \leq s \leq b_1 - b_2.
+\end{equation}
+Then the slack variable \( s \) can be treated as an additional decision variable in the linear programming model. And the inequality can be incorporated into the objective function as an equality equation.
