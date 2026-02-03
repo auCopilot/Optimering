@@ -1,0 +1,110 @@
+\documentclass[a4paper,11pt]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} % Change to 'danish' if preferred
+\usepackage{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% --- Page Geometry ---
+\geometry{
+    top=3cm,
+    bottom=3cm,
+    left=2.5cm,
+    right=2.5cm
+}
+
+% --- Python Code Style ---
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{filename.png}
+%     \caption{Description of the image}
+%     \label{fig:example}
+% \end{figure}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% --- Document Info ---
+\title{Week 2: Modellering og Løsning af Optimeringsproblemer}
+\author{Thomas} 
+\date{\today}
+% No indent
+\setlength\parindent{0pt}
+\begin{document}
+
+\maketitle
+
+\section*{LP-2}
+A company produces two products, a normal version $N$ and a luxury version $L$. We wish to maximize the profit from the production given some constraints. The profit on $N$ is 70 and on $L$ it is 100. Thus we can define the objective function as
+$$ Profit = 70N + 100L. $$
+The product needs construction. Each department, wood, plastic and assemply, has 30, 10 and 20 people available respectively. Each person can work 30 hours per week. The assemply time for each product given a material category can be represented in matrix form as:
+$$ A = \begin{bmatrix}
+    2.25 & 2.5 \\
+    1 & 0.5 \\
+    1 & 2 
+\end{bmatrix} $$
+where the rows represent wood, plastic and assemply respectively and the columns represent product $N$ and $L$. Furthermore, we can a constraint from the marketing department that the number of luxury products must be between $1/3$ and $2/3$ of the total production.
+We can augment the assemply matrix $A$ to get a total constraint matrix $C$ as:
+$$ C = \begin{bmatrix}
+    2.25 & 2.5 \\
+    1 & 0.5 \\
+    1 & 2 \\
+    \frac{1}{3} & -\frac{2}{3} \\
+    -\frac{1}{3} & \frac{2}{3}
+\end{bmatrix} $$
+Thus we have the following constraints:
+\begin{align*}
+    % add mathcal C to denote constraints
+    \mathcal{C}: \quad 
+    2.25N + 2.5L &\leq 30\cdot 30 \quad \text{(wood)} \\
+    1N + 0.5L &\leq 10 \cdot 30 \quad \text{(plastic)} \\
+    1N + 2L &\leq 20 \cdot 30 \quad \text{(assemply)} \\
+    L &\geq \frac{1}{3}(N + L) \iff \frac{N}{3} - \frac{2L}{3} \leq 0 \quad \text{(marketing lower bound)} \\
+    L &\leq \frac{2}{3}(N + L) \iff -\frac{N}{3} + \frac{2L}{3} \leq 0 \quad \text{(marketing upper bound)} \\
+    N, L &\geq 0 \quad \text{(non-negativity)}
+\end{align*}
+Thus we can state the model as:
+\begin{align*}
+    \text{Maximize} \quad & Profit = 70N + 100L \\
+    \text{subject to} \quad & \mathcal{C}
+\end{align*}
+This model is now ready to be solved using an pythons PuLP library.
+
+
+
+
+
+\subsection*{Python Code for LP-2}
+\lstinputlisting[language = Python]{LP2.py}
+
+\section*{12.1 Food manufacture 1}
+
+\end{document}
