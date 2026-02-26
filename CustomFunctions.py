@@ -36,13 +36,19 @@ def construct_constraints(model,
     print("Constraints constructed.")
 
 
-def print_solution(Model):
+def print_solution(Model, condition = None):
     # Loesning af modellen vha. PuLP's valg af Solver
     Model.solve()
     # Print af loesningens status
     print("Status:", PLP.LpStatus[Model.status])
     # Print af hver variabel med navn og loesningsvaerdi
-    for v in Model.variables():
-        print(v.name, "=", v.varValue)
+    if condition is not None:
+        for v in Model.variables():
+            if condition(v):
+                print(v.name, "=", v.varValue)
+    else:
+        for v in Model.variables():
+            print(v.name, "=", v.varValue)
+
     # Print af den optimale objektfunktionsvaerdi
     print("Obj. = ", PLP.value(Model.objective))
