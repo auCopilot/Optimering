@@ -11,7 +11,7 @@ DC-supplier """
 """ Problem input """
 # Let index 0,1 denote Liverpool and Brighton respectively
 suppliers = ["Liverpool", "Brighton"]
-supply = [150000, 200000]  # tons
+supply = [150000, 200]  # tons
 distributors = ["Newcastle", "Birmingham", "London", "Exeter"]
 throughput = [70000, 50000, 100000, 40000]
 demand = [50000, 10000, 40000, 35000, 60000, 20000]
@@ -104,7 +104,7 @@ def define_transport_problem(costs, distributor_costs,
         costs = np.append(costs, [x], axis = 0)
         i += 1
 
-    print(costs)
+
     # Modify cost matrix according to the surplus of supply or demand, if any.
     if diff > 0:
         # Add zero cost row to dummy costumer
@@ -112,8 +112,11 @@ def define_transport_problem(costs, distributor_costs,
         costs = np.vstack([costs, x])
     if diff < 0:
         # Add zero cost column to dummy supplier
-        costs = np.hstack([costs, np.zeros((n + k, 1))])
-
+        x = np.repeat(M, n + k)
+        for i in range(n_customer):
+            x[i] = 0
+        costs = np.hstack([costs,x.reshape(-1, 1)])
+    print(costs)
     print("Defining Transportation problem with:")
     print(
         f"{n_supplier} suppliers, {n_distributor} distributors, {n_customer} customers")
