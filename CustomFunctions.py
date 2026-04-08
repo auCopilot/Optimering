@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 
 def construct_constraints(model,
                           x,
-                          variable_names,
                           coef_matrix,
                           rhs,
                           equality_types):
@@ -23,8 +22,10 @@ def construct_constraints(model,
     """
     # Determine number of constraints from length of rhs
     n_constraints = len(rhs)
+    variable_names = list(x.keys())
     n_variables = len(variable_names)
-    # Define constraints according to their types.
+    # Define constraints according to their types
+
     for i in range(n_constraints):
         constraint_expr = PLP.lpSum(coef_matrix[i][j] * x[variable_names[j]]
                                     for j in range(n_variables))
@@ -180,9 +181,13 @@ class LPFeasibleRegionPlotter:
 
 def print_solution(Model, condition = None):
     # Loesning af modellen vha. PuLP's valg af Solver
-    Model.solve()
+    # Solve quietly
+    print()
+    Model.solve(PLP.PULP_CBC_CMD(msg = 0))
+    # Model.solve()
     # Print af loesningens status
     print("Status:", PLP.LpStatus[Model.status])
+
     # Print af hver variabel med navn og loesningsvaerdi
     if condition is not None:
         for v in Model.variables():

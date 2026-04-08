@@ -52,7 +52,7 @@ for g in range(len(group_idx)):
 
 # Print af dual information
 print("Duale priser:")
-for name, c in list(model.constraints.items()):
+for name, c in model.constraints.items():
      print(name,":",c.pi)
 
 # b)
