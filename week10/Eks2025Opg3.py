@@ -16,7 +16,7 @@ cost_matrix = np.zeros((n,n))
 
 for i in range(n):
     for j in range(n):
-        cost_matrix[i][j] = distances[i] * flows[j]
+        cost_matrix[i][j] = distances[j] * flows[i]
 print("Cost matrix:", cost_matrix)
 
 from modeller.assignment_problem import AssignmentProblem
@@ -89,16 +89,34 @@ the linear AP is also considered.
 """
 # Standard QAD
 QAD = QuadraticAssignmentProblem(n = n,
-                                 flow_matrix = flows,
-                                 distance_matrix= distances)
+                                 flow_matrix = flows_no_gate,
+                                 distance_matrix= distances_no_gate)
 # Update the obejctive
 QAD.model.objective = QAD.model.objective + PLP.lpSum(QAD.x[i][j]*
                                                       cost_matrix[i][j]
                                                       for i in range(n)
                                                       for j in range(n))
+
+
 # Rename according to gate names.
 for i in QAD.variable_range:
     for j in QAD.variable_range:
-        QAD.x[i][j].name = f"x_{i}_{gates[j]}"
-
+        QAD.x[i][j].name = f"x_{i+1}_{gates[j]}"
+print("QAP-AP")
 QAD.solve()
+
+print("QAP with dummy plane, forced to index 0")
+n = n + 1
+QAD = QuadraticAssignmentProblem(n = n,
+                                 flow_matrix = flows,
+                                 distance_matrix = distances)
+# Zeroth index is a dummy plane. We must make the location of this plane fixed.
+# Dummy plane is fixed to first gate, so we add the constraint that x[0][0] = 1
+QAD.model += QAD.x[0][0] == 1, "DummyPlaneConstraint"
+# Rename according to gate names.
+gates = ["IU"] + gates
+for i in QAD.variable_range:
+    for j in QAD.variable_range:
+        QAD.x[i][j].name = f"x_{i}_{gates[j]}"
+QAD.solve()
+
