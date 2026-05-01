@@ -72,5 +72,18 @@ class AssignmentProblem:
         print("Value of Objective function. = ",
               PLP.value(self.model.objective))
 
+    def print_assignment_details(self):
+        total_calculated_cost = 0
+        for i in self.variable_range:
+            for j in self.variable_range:
+                amount = self.x[i][j].varValue
+                unit_cost = self.cost_matrix[i][j]
+                route_cost = amount * unit_cost
+                total_calculated_cost += route_cost
+                print(f"Job {i} is assigned to worker {j}, at cost {route_cost}")
+
+        print("Total calculated cost = ", total_calculated_cost)
+
+
 
 

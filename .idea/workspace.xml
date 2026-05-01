@@ -8,9 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4a313a9-63c5-4249-86cc-c22776b7089f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/week12/Eks2021Opg3.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modeller/transport_problem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week13/Eks2022Opg1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Optimering.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Optimering.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week10/Eks2025Opg3.py" beforeDir="false" afterPath="$PROJECT_DIR$/week10/Eks2025Opg3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeller/assignment_problem.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/assignment_problem.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -61,47 +63,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.ATSP-LittleEtAl-Reduktion.executor&quot;: &quot;Run&quot;,
-    &quot;Python.BranchAndBoundATSP.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ColumnGeneration.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CustomFunctions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CuttingStockColumnProblem.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CuttingStockLowerBoundLP.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CuttingStockWeakFormulation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Distribution1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Eks2025Opg3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.FactoryPlanning1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HELTAL-3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HELTAL-5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.LP3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.NET2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.OpencastMining.executor&quot;: &quot;Run&quot;,
-    &quot;Python.QAP-FacilityLayout.executor&quot;: &quot;Run&quot;,
-    &quot;Python.handin5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/thoma/Documents/AarhusUniversitet/Modellering og løsning af optimeringsproblemer/week06&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.ATSP-LittleEtAl-Reduktion.executor": "Run",
+    "Python.BranchAndBoundATSP.executor": "Run",
+    "Python.ColumnGeneration.executor": "Run",
+    "Python.CustomFunctions.executor": "Run",
+    "Python.CuttingStockColumnProblem.executor": "Run",
+    "Python.CuttingStockLowerBoundLP.executor": "Run",
+    "Python.CuttingStockWeakFormulation.executor": "Run",
+    "Python.Distribution1.executor": "Run",
+    "Python.Eks2025Opg3.executor": "Run",
+    "Python.FactoryPlanning1.executor": "Run",
+    "Python.HELTAL-3.executor": "Run",
+    "Python.HELTAL-5.executor": "Run",
+    "Python.LP3.executor": "Run",
+    "Python.NET2.executor": "Run",
+    "Python.OpencastMining.executor": "Run",
+    "Python.QAP-FacilityLayout.executor": "Run",
+    "Python.TransportEks52.executor": "Run",
+    "Python.handin5.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/thoma/Documents/AarhusUniversitet/Modellering og løsning af optimeringsproblemer/week06",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\thoma\Documents\AarhusUniversitet\Modellering og løsning af optimeringsproblemer\week06" />
@@ -111,7 +114,7 @@
       <recent name="C:\Users\thoma\Documents\AarhusUniversitet\Modellering og løsning af optimeringsproblemer\week04" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Eks2025Opg3">
+  <component name="RunManager" selected="Python.TransportEks52">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="Modellering og løsning af optimeringsproblemer" />
       <option name="ENV_FILES" value="" />
@@ -194,7 +197,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.13 (Modellering og løsning af optimeringsproblemer)" />
       <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -203,6 +205,32 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/QAP-FacilityLayout.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TransportEks52" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Modellering og løsning af optimeringsproblemer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13 (Modellering og løsning af optimeringsproblemer)" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/TransportEks52.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -372,6 +400,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.TransportEks52" />
         <item itemvalue="Python.Eks2025Opg3" />
         <item itemvalue="Python.QAP-FacilityLayout" />
         <item itemvalue="Python.HELTAL-5" />
@@ -421,6 +450,7 @@
       <workItem from="1776420584496" duration="3119000" />
       <workItem from="1776668636115" duration="427000" />
       <workItem from="1777304349801" duration="12039000" />
+      <workItem from="1777539340959" duration="20040000" />
     </task>
     <servers />
   </component>
@@ -442,6 +472,7 @@
     <SUITE FILE_PATH="coverage/HELTAL_5_py$Eks2025Opg3.coverage" NAME="Eks2025Opg3 Coverage Results" MODIFIED="1776423050391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week10" />
     <SUITE FILE_PATH="coverage/LP3_py$test.coverage" NAME="test Coverage Results" MODIFIED="1772192521322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Distribution1_py$ColumnGeneration.coverage" NAME="ColumnGeneration Coverage Results" MODIFIED="1774355111702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week08" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$TransportEks52.coverage" NAME="TransportEks52 Coverage Results" MODIFIED="1777542129346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/Distribution1_py$HELTAL_5.coverage" NAME="HELTAL-5 Coverage Results" MODIFIED="1775639976030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week09" />
     <SUITE FILE_PATH="coverage/LP3_py$Distribution1.coverage" NAME="Distribution1 Coverage Results" MODIFIED="1772714151870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week05" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$HELTAL_5.coverage" NAME="HELTAL-5 Coverage Results" MODIFIED="1775738248319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week09" />
