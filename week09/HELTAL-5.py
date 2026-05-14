@@ -11,7 +11,7 @@ city_coordinates = list(zip(x,y))
 city_range = range(len(x))
 
 p = (range(10))
-L = 3
+L = 2
 
 possible_coordinates = list(product(p,p))
 print("Length pos", len(possible_coordinates))
