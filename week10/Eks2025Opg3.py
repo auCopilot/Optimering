@@ -67,18 +67,20 @@ else:
 distances_no_gate = distances[1:,1:]
 flows_no_gate = flows[1:,1:]
 
-
-
-QAD_no_gate = QuadraticAssignmentProblem(n = n,
+machine_range = range(n)
+location_range = range(n)
+QAD_no_gate = QuadraticAssignmentProblem(machine_range = machine_range,
+                                         location_range = location_range,
                                  flow_matrix = flows_no_gate,
                                  distance_matrix = distances_no_gate)
 
 
 # Rename according to gate names.
-for i in QAD_no_gate.variable_range:
-    for j in QAD_no_gate.variable_range:
+for i in QAD_no_gate.machine_range:
+    for j in QAD_no_gate.location_range:
         QAD_no_gate.x[i][j].name = f"x_{i}_{gates[j]}"
-
+QAD_no_gate.construct_model()
+QAD_no_gate.construct_constraints()
 QAD_no_gate.solve()
 
 ##################################### Spm. 3) ################################
@@ -88,35 +90,43 @@ a mixed AP-QAP problem, where we edit the obejctive in the QAP, such that
 the linear AP is also considered.
 """
 # Standard QAD
-QAD = QuadraticAssignmentProblem(n = n,
+QAD = QuadraticAssignmentProblem(machine_range = machine_range,
+                                location_range = location_range,
                                  flow_matrix = flows_no_gate,
                                  distance_matrix= distances_no_gate)
 # Update the obejctive
+QAD.construct_model()
+
 QAD.model.objective = QAD.model.objective + PLP.lpSum(QAD.x[i][j]*
                                                       cost_matrix[i][j]
                                                       for i in range(n)
                                                       for j in range(n))
-
+QAD.construct_constraints()
 
 # Rename according to gate names.
-for i in QAD.variable_range:
-    for j in QAD.variable_range:
+for i in QAD.machine_range:
+    for j in QAD.location_range:
         QAD.x[i][j].name = f"x_{i+1}_{gates[j]}"
 print("QAP-AP")
 QAD.solve()
 
 print("QAP with dummy plane, forced to index 0")
 n = n + 1
-QAD = QuadraticAssignmentProblem(n = n,
+machine_range = range(n)
+location_range = range(n)
+QAD = QuadraticAssignmentProblem(machine_range = machine_range,
+                                location_range = location_range,
                                  flow_matrix = flows,
                                  distance_matrix = distances)
 # Zeroth index is a dummy plane. We must make the location of this plane fixed.
 # Dummy plane is fixed to first gate, so we add the constraint that x[0][0] = 1
+QAD.construct_model()
 QAD.model += QAD.x[0][0] == 1, "DummyPlaneConstraint"
+QAD.construct_constraints()
 # Rename according to gate names.
 gates = ["IU"] + gates
-for i in QAD.variable_range:
-    for j in QAD.variable_range:
+for i in QAD.machine_range:
+    for j in QAD.location_range:
         QAD.x[i][j].name = f"x_{i}_{gates[j]}"
 QAD.solve()
 

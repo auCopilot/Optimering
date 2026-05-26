@@ -11,7 +11,7 @@ class multiple_tsp:
 
     Depot value is the first vertex in the problem, thus i = 0 or j = 0
 
-    Note this generalizes to the standard MTZ ATSP if we set m = 1 and L = n - 1,
+    Note this generalizes to the standard MTZ ATSP from Uge 10, TSP-Formuleringer if we set m = 1 and L = n - 1,
 
     """
     def __init__(self, m, n, L, cost_matrix, x_coords = None, y_coords = None):
