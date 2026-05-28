@@ -1,7 +1,21 @@
-import math
-
 import pulp as PLP
 import numpy as np
+from cvrp_mtz import cvrp_mtz
+
+class multiple_tsp_from_cvrp(cvrp_mtz):
+
+    """
+    Et CVRP kan betragtes som en generalisering af MTSP, idet et MTSP fremkommer som et
+    specialtilfælde af CVRP, hvor alle qi = 1, og hvor Q er det maksimale antal punkter på en rute
+    """
+    def __init__(self, m, n, L, cost_matrix, x_coords = None, y_coords = None):
+        # Maximum vehicle capacity, reformulated as the maximum number of verticies a traveller can visit
+        max_verticies = L
+        # All have demand 1
+        demand = n * [1]
+        super().__init__(m, n, demand, max_verticies , cost_matrix, x_coords, y_coords)
+
+
 
 class multiple_tsp:
     """
@@ -11,7 +25,8 @@ class multiple_tsp:
 
     Depot value is the first vertex in the problem, thus i = 0 or j = 0
 
-    Note this generalizes to the standard MTZ ATSP from Uge 10, TSP-Formuleringer if we set m = 1 and L = n - 1,
+    Note this generalizes to the standard MTZ ATSP from Uge 10, TSP-Formuleringer if we set m = 1 and L = n - 1, however
+    i have implemented a seperate class for these problems specifically
 
     """
     def __init__(self, m, n, L, cost_matrix, x_coords = None, y_coords = None):
@@ -44,28 +59,32 @@ class multiple_tsp:
         #### Obejctive function ####
         self.model += PLP.lpSum(self.cost_matrix[i][j] * self.x[(i,j)] for i,j in self.arcs), "Objective"
 
+
+
+    def define_constraints(self):
         #### Constraints ####
 
         # We must have m routes leaving the depot (vertex 0)
-        self.model += PLP.lpSum(self.x[(0, j)] for j in range(1, self.n)) == m, "LeavingDepot"
+        self.model += PLP.lpSum(self.x[(0, j)] for j in range(1, self.n)) == self.m, "LeavingDepot"
 
         # We must have m routes returning to the depot (vertex 0)
-        self.model += PLP.lpSum(self.x[(i, 0)] for i in range(1, self.n)) == m, "EnteringDepot"
+        self.model += PLP.lpSum(self.x[(i, 0)] for i in range(1, self.n)) == self.m, "EnteringDepot"
 
         # Outflow is 1 for all vertex
         for i in range(1, self.n):
-            self.model += PLP.lpSum(self.x[(i,j)] for j in range(self.n) if (i,j) in self.arcs) == 1, f"Outflow{i}"
+            self.model += PLP.lpSum(self.x[(i, j)] for j in range(self.n) if (i, j) in self.arcs) == 1, f"Outflow{i}"
 
         # Inflow is 1 for all vertex
         for j in range(1, self.n):
-            self.model += PLP.lpSum(self.x[(i,j)] for i in range(self.n) if (i,j) in self.arcs) == 1, f"Inflow{j}"
+            self.model += PLP.lpSum(self.x[(i, j)] for i in range(self.n) if (i, j) in self.arcs) == 1, f"Inflow{j}"
 
         # Subtour elimination and maximum number of verticies a traveller can visit
         for i, j in self.arcs:
             if i != 0 and j != 0:
-                if i != j: # Only for arcs between customers
-                    self.model += self.u[i] - self.u[j] + self.L * self.x[(i,j)] <= self.L - 1, f"SubtourElimination_{i}_{j}"
-
+                if i != j:  # Only for arcs between customers
+                    self.model += self.u[i] - self.u[j] + self.L * self.x[
+                        (i, j)] <= self.L - 1, f"SubtourElimination_{i}_{j}"
+        self.constraints = "Added"
 
     def cost_from_coordinates(self, x_cords, y_cords):
         # Computes L2 distance between points, this can serve as a cost.
@@ -85,6 +104,9 @@ class multiple_tsp:
         return cost_matrix
 
     def solve_and_print(self, one_indexed = True, msg = False):
+
+        if self.constraints != "Added":
+            raise Exception("You must define the constraints before solving, call define_constraints() method")
         self.model.solve(PLP.PULP_CBC_CMD(msg=msg))
         print("Status:", PLP.LpStatus[self.model.status])
         eps = 0.5
@@ -123,7 +145,13 @@ if __name__ == "__main__":
     YCoor = [2, 1, 2, 4, 5, 7, 6, 4, 8, 3, 5, 7, 10, 9, 8]
 
     n = len(XCoor) # Number of vertices
-    m = 1  # Number of travelers
+    m = 2  # Number of travelers
     L = len(XCoor) - 1 # Max vertex visits
     test_mtsp = multiple_tsp(m, n, L, None, XCoor, YCoor)
+    test_mtsp.define_constraints()
     test_mtsp.solve_and_print(one_indexed = True)
+
+    print("FROM CVRP")
+    test_from_cvrp = multiple_tsp_from_cvrp(m, n, L, None, XCoor, YCoor)
+    test_from_cvrp.define_constraints()
+    test_from_cvrp.solve_and_print(one_indexed = True)

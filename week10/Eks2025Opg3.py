@@ -19,7 +19,7 @@ for i in range(n):
         cost_matrix[i][j] = distances[j] * flows[i]
 print("Cost matrix:", cost_matrix)
 
-from modeller.assignment_problem import AssignmentProblem
+from modeller.network.assignment_problem import AssignmentProblem
 variable_dict = dict((i,gates[j]) for i in range(n) for j in range(n))
 assignment_problem = AssignmentProblem(n,
                                        cost_matrix = cost_matrix,

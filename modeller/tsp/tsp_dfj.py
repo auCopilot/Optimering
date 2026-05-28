@@ -1,9 +1,8 @@
 import pulp as PLP
-
+import itertools
 import numpy as np
 
-import itertools
-class symmetric_tsp_dfj:
+class tsp_dfj:
     """ This implementation of the symmetric TSP DFJ problem follows from
     the slipes in uge 10, TSP-formuleringer (pdf), slides 7 - 10"""
 
@@ -17,10 +16,37 @@ class symmetric_tsp_dfj:
         # ILP problem
         self.model = PLP.LpProblem(name = "SymmetricTSP_DFJ", sense = PLP.LpMinimize)
         # Define arcs,
-        self.arcs = [(i,j) for i in range(n) for j in range(n) if i < j]
+        self.arcs = [(i,j) for i in range(n) for j in range(n)]
         # Definte subsets
         self.S = self.define_subsets()
+
         #### Variable definition ####
+        # Binary variable indicating whether arc (i,j) is used in the solution
+        self.x = PLP.LpVariable.dicts("x", self.arcs, lowBound=0, upBound=1, cat=PLP.LpBinary)
+
+        #### Obejctive function ####
+        self.model += PLP.lpSum(self.cost_matrix[i][j] * self.x[(i, j)] for i, j in self.arcs), "Objective"
+
+
+    def define_constraints(self):
+
+        ### CONSTRAINTS ###
+        # Outlow
+        for i in range(self.n):
+            self.model += PLP.lpSum(self.x[(i, j)] for j in range(self.n)) == 1, f"Outflow{i}"
+
+
+        # Inflow
+        for j in range(self.n):
+            self.model += PLP.lpSum(self.x[(i, j)] for i in range(self.n)) == 1, f"Inflow{j}"
+
+        # Subtour elimination, DFJ uses subsets and we restrict the solution such that
+        # There does not exist a S subset of {0, 1, 2, ..., n - 1 } such there is a closed
+        # loops in the solution in the vertices contained in S
+        for k, s in enumerate(self.S):
+            self.model += PLP.lpSum(self.x[(i, j)] for i in s for j in s if i < j) <= len(
+                s) - 1, f"SubtourElimination{k}"
+        self.constraints = "Added"
 
     def cost_from_coordinates(self, x_cords, y_cords):
         # Computes L2 distance between points, this can serve as a cost.
@@ -41,7 +67,7 @@ class symmetric_tsp_dfj:
 
     def define_subsets(self):
         S = []
-        for cardinality in range(3, self.n - 3):
+        for cardinality in range(2, self.n - 2 + 1):
             # Finds all combinations of the cardinality
             subset = itertools.combinations(list(range(self.n)), cardinality)
             # Return the set
@@ -51,27 +77,9 @@ class symmetric_tsp_dfj:
         return S
 
     def solve_and_print(self, one_indexed = True, quiet = True):
-        ### CONSTRAINTS ###
-        # Binary variable indicating whether arc (i,j) is used in the solution
-        self.x = PLP.LpVariable.dicts("x", self.arcs, lowBound=0, upBound=1, cat=PLP.LpBinary)
-
-        #### Obejctive function ####
-        self.model += PLP.lpSum(self.cost_matrix[i][j] * self.x[(i, j)] for i, j in self.arcs), "Objective"
-
-        ### Valence contraint, makes sure that each point it connected to two other points
-        for j in range(self.n):
-            self.model += PLP.lpSum(self.x[(i, j)] for i in range(j)) + \
-                          PLP.lpSum(self.x[(j, i)] for i in range(j + 1, self.n)) \
-                          == 2, f"valence{j}"
-
-        ### Subtour elimination, DFJ uses subsets and we restrict the solution such that
-        # There does not exist a S subset of {0, 1, 2, ..., n - 1 } such there is a closed
-        # loops in the solution in the vertices contained in S
-        for k, s in enumerate(self.S):
-            self.model += PLP.lpSum(self.x[(i, j)] for i in s for j in s if i < j) <= len(
-                s) - 1, f"SubtourElimination{k}"
-
         ### SOLVE ###
+        if self.constraints is None:
+            raise Exception("You must define the constraints before solving, call define_constraints() method")
 
         self.model.solve(PLP.PULP_CBC_CMD(msg = 0 if quiet else 1))
         print("Status:", PLP.LpStatus[self.model.status])
@@ -80,22 +88,3 @@ class symmetric_tsp_dfj:
             if self.x[arc].varValue > 0.5:
                 print(f"Arc ({arc[0] + (1 if one_indexed else 0)}, {arc[1] + (1 if one_indexed else 0)}) is in the"
                       f" solution with cost {round(self.cost_matrix[arc[0]][arc[1]],2)}")
-
-x_coords = "2.0 2.5 2.8 1.0 1.5 2.0 1.5 7.0 7.3 7.9 8.2 7.6".split(" ")
-x_coords = [float(v) for v in x_coords]
-y_coords = "3.0 3.5 2.7 8.0 8.5 8.0 7.5 5.0 5.4 5.6 5.0 4.5".split(" ")
-y_coords = [float(v) for v in y_coords]
-n = len(x_coords)
-
-STSP = symmetric_tsp_dfj(n, x_coords=x_coords, y_coords=y_coords)
-STSP.S = []
-STSP.solve_and_print(quiet = False)
-
-STSPrelaxed = symmetric_tsp_dfj(n, x_coords=x_coords, y_coords=y_coords)
-STSPrelaxed.S = [(range(3)), range(3, 7), range(7, 12)]
-STSPrelaxed.solve_and_print(quiet = False)
-
-for name, constraint in STSPrelaxed.model.constraints.items():
-    if "Subtour" in name:
-        print(name, " : ", constraint)
-

@@ -1,6 +1,5 @@
-import numpy as np
 import pulp as PLP
-from modeller.minimum_cost_flow import min_cost_flow
+from modeller.network.minimum_cost_flow import min_cost_flow
 
 class maximum_flow(min_cost_flow):
     """

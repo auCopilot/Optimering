@@ -111,7 +111,7 @@ class TransportProblem:
         print("Value of Objective function. = ",
               PLP.value(self.model.objective))
 
-    def print_transport_details(self, epsilon=1e-5, one_indexed = False):
+    def print_transport_details(self, epsilon=1e-5, one_indexed = False, msg = True):
         """Prints the amount and cost details for all active transport routes."""
         print("\n--- Transport Route Details ---")
         if one_indexed:
@@ -119,7 +119,7 @@ class TransportProblem:
             idx = 1
         else:
             idx = 0
-        self.model.solve(PLP.PULP_CBC_CMD(msg=0))
+        self.model.solve(PLP.PULP_CBC_CMD(msg= True if msg else False))
         # Make sure the model has been solved
         if self.model.status != PLP.LpStatusOptimal:
             print("Model has not been solved to optimality yet.")

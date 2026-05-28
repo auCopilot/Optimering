@@ -8,7 +8,6 @@ from pyexpat import model
 def branch_and_bound(LPmodel, sense, best_so_far = [None], objectives = [None], problem = [0]):
 
     """
-
     :param LPmodel:
     input a Linear Programming relaxation of the ILP problem.
     Note it is import to keep track of if it is a minimization or maximization problem, as this will determine the

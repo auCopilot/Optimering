@@ -1,4 +1,4 @@
-from modeller.shortest_path import *
+from modeller.network.shortest_path import *
 
 
 class clustering_from_shortest_path(shortest_path):
