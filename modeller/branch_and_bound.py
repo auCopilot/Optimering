@@ -4,7 +4,6 @@ from math import ceil, floor
 import copy
 from pyexpat import model
 
-
 def branch_and_bound(LPmodel, sense, best_so_far = [None], objectives = [None], problem = [0]):
 
     """
@@ -74,7 +73,10 @@ def branch_and_bound(LPmodel, sense, best_so_far = [None], objectives = [None], 
             print(v.name, "=", v.varValue)
         print("Objective value: ", obj)
         print()
-        best_so_far[0] = obj
+        if obj > best_so_far[0] and sense == "maximize":
+            best_so_far[0] = obj
+        if obj < best_so_far[0] and sense == "minimize":
+            best_so_far[0] = obj
         objectives[0] = obj
         return objectives
 
@@ -110,7 +112,7 @@ def branch_and_bound(LPmodel, sense, best_so_far = [None], objectives = [None], 
     problem[0] = problem[0] + 1
     branch_and_bound(right_model, sense, best_so_far, objectives, problem)
 
-    return objectives
+    return best_so_far[0]
 
 
 
@@ -132,8 +134,27 @@ if __name__ == "__main__":
     c3 = [4, 5, 4]
     model += PLP.lpSum(c3[i]*x[i] for i in x_range) <= 50, "Constraint3"
 
-    sol = branch_and_bound(model, "minimize")
-    print("Best solution: ", sol[0])
+    sol = branch_and_bound(model, "maximize")
+    print("Best solution: ", sol)
+    print()
+
+    # Compare with ILP:
+    model = PLP.LpProblem("Example", sense=PLP.LpMaximize)
+
+    x_range = range(3)
+    coef = [55, 53, 81]
+    x = PLP.LpVariable.dicts("x", x_range, lowBound=0, cat=PLP.LpInteger)
+    model += PLP.lpSum(coef[i] * x[i] for i in x_range), "Objective"
+
+    c1 = [8, 2, 4]
+    model += PLP.lpSum(c1[i] * x[i] for i in x_range) <= 50, "Constraint1"
+    c2 = [1, 8, 7]
+    model += PLP.lpSum(c2[i] * x[i] for i in x_range) <= 60, "Constraint2"
+    c3 = [4, 5, 4]
+    model += PLP.lpSum(c3[i] * x[i] for i in x_range) <= 50, "Constraint3"
+
+    model.solve()
+    print("Best solution: ", PLP.value(model.objective))
     print()
 
 

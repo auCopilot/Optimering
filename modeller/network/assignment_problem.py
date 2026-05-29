@@ -45,8 +45,10 @@ class AssignmentProblem:
         for j in self.variable_range:
             self.model += PLP.lpSum(self.x[i][j] for i in self.variable_range) == 1, f"Worker_{j}_constraint"
         # Positivity constraints are already defined by lowBound = 0 in variable definition
+        self.constraints = "ADDED"
     def solve(self, quiet = True, postive_variables_only = True):
-
+        if self.constraints != "ADDED":
+            raise ValueError("Constraints must be ADDED")
         # Solve quietly
         print()
         self.model.solve(PLP.PULP_CBC_CMD(msg = 0 if quiet else 1))

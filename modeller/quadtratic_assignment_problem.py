@@ -32,6 +32,7 @@ class QuadraticAssignmentProblem:
         self.model += PLP.lpSum(self.flow_matrix[t[0]][t[2]] *
                                 self.distance_matrix[t[1]][t[3]]
                                 * self.y[t] for t in self.y_tuples), "Objective"
+        self.model_construction = True
 
     def construct_constraints(self):
 
@@ -69,10 +70,15 @@ class QuadraticAssignmentProblem:
             self.model += self.y[t] <= self.x[t[0]][t[1]]
             self.model += self.y[t] <= self.x[t[2]][t[3]]
             self.model += self.y[t] >= self.x[t[0]][t[1]] + self.x[t[2]][t[3]] - 1
+        self.constraints = "ADDED"
+
 
 
     def solve(self, quiet = True, postive_variables_only = True):
-
+        if not self.model_construction:
+            raise Exception("You must construct the model before solving.")
+        if self.constraints != "ADDED":
+            raise Exception("You must constrain the model before solving.")
         # Solve quietly
         print()
         self.model.solve(PLP.PULP_CBC_CMD(msg = 0 if quiet else 1))

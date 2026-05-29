@@ -34,7 +34,11 @@ class critical_path_problem:
             # decision variable t must be less than or equal to z for all nodes
             self.model += self.t[j] <= self.z
 
+        self.constraints = "ADDED"
+
     def solve_and_print(self):
+        if self.constraints != "ADDED":
+            raise Exception("You must add constraints before solving")
         self.construct_constraints()
         self.model.solve()
 
@@ -43,6 +47,10 @@ class critical_path_problem:
 
         for j in self.nodes:
             print(f"Node {j} has time {round(self.t[j].varValue, 2)}")
+        for var in self.model.variables():
+            if "t" in var.name:
+                print(var.name, ":", var.value())
+
 
 
 # Example usage:

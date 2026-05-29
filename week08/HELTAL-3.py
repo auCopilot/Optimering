@@ -39,3 +39,10 @@ while dual_objective_value > 1:
                                                            )
 print("\nFINAL SOLUTION")
 print_solution(model)
+
+print("CLASS IMPLEMENTATION OF THE CUTTING STOCK PROBLEM")
+
+from modeller.cutting_stock import cutting_stock
+CSP = cutting_stock(stock_length, lengths, desired_amounts)
+CSP.define_constraints()
+CSP.solve_and_print_solution()
