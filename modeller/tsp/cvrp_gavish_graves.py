@@ -1,7 +1,7 @@
 import numpy as np
 import pulp as PLP
 
-class cvrp_mtz:
+class cvrp_gavish_graves:
     """
     This implementation follows from uge 13 VRP-MTZ, and defines the Capacitated Vehicle Routing Problem (CVRP) using
     the MTZ formulation.
@@ -45,7 +45,7 @@ class cvrp_mtz:
 
         # Binary variable indicating whether arc (i,j) is used in the solution
         self.x = PLP.LpVariable.dicts("x", self.arcs, lowBound=0, upBound=1, cat=PLP.LpBinary)
-
+        self.f = PLP.LpVariable.dicts("f", self.arcs, lowBound=0, cat = PLP.LpContinuous)
         # Indicator variable that indentifies the i'th vertex position in the traversal of the rute
         self.u = PLP.LpVariable.dicts("u", range(n), lowBound=0)
 
@@ -68,18 +68,18 @@ class cvrp_mtz:
         # Inflow is 1 for all vertex
         for j in range(1, self.n):
             self.model += PLP.lpSum(self.x[(i, j)] for i in range(self.n) if (i, j) in self.arcs) == 1, f"Inflow{j}"
-
-        # Subtour elimination and maximum number of verticies a traveller can visit
-        for i, j in self.arcs:
-            if i != 0 and j != 0:
-                if i != j:  # Only for arcs between customers
-                    self.model += self.u[i] - self.u[j] + self.vehicle_capacity * self.x[
-                        (i, j)] <= self.vehicle_capacity - self.demand[j], f"SubtourElimination_{i}_{j}"
-        self.constraints = "Added"
-
+        # Amount out = Amount in + demand
         for i in range(1, self.n):
-            self.model += self.demand[i] <= self.u[i], f"Demand{i}"
-            self.model += self.u[i] <= self.vehicle_capacity, f"VehicleCapacity_{i}"
+            self.model += (PLP.lpSum(self.f[(i,j)] - self.f[(j,i)]
+                                    for j in range(self.n)
+                                    if (((i, j) in self.arcs) or ((j, i) in self.arcs)))
+                                    - self.demand[i] == 0, f"InOutDemand{i}")
+        # Bounds for f variables
+        for arc in self.arcs:
+            self.model += self.f[arc] >= 0, f"LowBoundf{arc}"
+            self.model += self.f[arc] <= self.vehicle_capacity * self.x[arc], f"HighBoundf{arc}"
+
+        self.constraints = "Added"
 
 
 
@@ -123,8 +123,7 @@ class cvrp_mtz:
                     f"{u_step}"
                     f" th vertex in the route\n"
                 )
-        print("Total cost:", PLP.value(self.model.objective)
-              )
+        print("Total cost:", PLP.value(self.model.objective))
 
 
 
@@ -136,6 +135,6 @@ if __name__ == "__main__":
 
     m = 3  # Antal ruter
     Q = 10  # Vognkapacitet
-    CVRP = cvrp_mtz(m, n, demand = Demand, vehicle_capacity = Q, cost_matrix= None, x_coords= XCoor, y_coords= YCoor)
+    CVRP = cvrp_gavish_graves(m, n, demand = Demand, vehicle_capacity = Q, cost_matrix= None, x_coords= XCoor, y_coords= YCoor)
     CVRP.define_constraints()
     CVRP.solve_and_print(one_indexed = True, msg= True)

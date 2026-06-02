@@ -8,14 +8,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4a313a9-63c5-4249-86cc-c22776b7089f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/OldExams/Eks2025.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OldExams/Eks2024.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Opgaver/LP-2_Mixing_Problem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modeller/tsp/cvrp_gavish_graves.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week08 - cutting stock/.gitkeep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modeller/branch_and_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/branch_and_bound.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modeller/cutting_stock.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/cutting_stock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modeller/network/assignment_problem.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/network/assignment_problem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modeller/network/critical_path_problem.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/network/critical_path_problem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modeller/quadtratic_assignment_problem.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/quadtratic_assignment_problem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week08/HELTAL-3.py" beforeDir="false" afterPath="$PROJECT_DIR$/week08/HELTAL-3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OldExams/Eks2025.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/OldExams/Eks2025.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modeller/tsp/cvrp_mtz.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/tsp/cvrp_mtz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week05/handin5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Opgaver/LP-1_Mixing_Problem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week08/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/Opgaver/LP-3_Mixing_Problem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week08/CuttingStockColumnProblem.py" beforeDir="false" afterPath="$PROJECT_DIR$/week08 - cutting stock/CuttingStockColumnProblem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week08/CuttingStockLowerBoundLP.py" beforeDir="false" afterPath="$PROJECT_DIR$/week08 - cutting stock/CuttingStockLowerBoundLP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week08/CuttingStockMasterLP.py" beforeDir="false" afterPath="$PROJECT_DIR$/week08 - cutting stock/CuttingStockMasterLP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week08/CuttingStockWeakFormulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/week08 - cutting stock/CuttingStockWeakFormulation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week08/HELTAL-3.py" beforeDir="false" afterPath="$PROJECT_DIR$/week08 - cutting stock/HELTAL-3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week08/KnapSack.py" beforeDir="false" afterPath="$PROJECT_DIR$/week08 - cutting stock/KnapSack.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +47,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -75,69 +82,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python tests.Doctests in pulp.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.ATSP-LittleEtAl-Reduktion.executor&quot;: &quot;Run&quot;,
-    &quot;Python.BranchAndBoundATSP.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CVRP-n15 (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.ColumnGeneration.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CustomFunctions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CuttingStockColumnProblem.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CuttingStockLowerBoundLP.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CuttingStockWeakFormulation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Distribution1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Eks2025Opg3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EksOpg-MLOPT-Juni-2022-Opg1.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.FactoryPlanning1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HELTAL-3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HELTAL-5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.KortesteVejEks55 (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.LP3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.MTSP-n15.executor&quot;: &quot;Run&quot;,
-    &quot;Python.MinCostFlowEks54.executor&quot;: &quot;Run&quot;,
-    &quot;Python.NET2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.OpencastMining.executor&quot;: &quot;Run&quot;,
-    &quot;Python.QAP-FacilityLayout.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TransportEks52.executor&quot;: &quot;Run&quot;,
-    &quot;Python.branch_and_bound.executor&quot;: &quot;Run&quot;,
-    &quot;Python.critical_path_problem.executor&quot;: &quot;Run&quot;,
-    &quot;Python.cvrp_mtz.executor&quot;: &quot;Run&quot;,
-    &quot;Python.decentralisation1210.executor&quot;: &quot;Run&quot;,
-    &quot;Python.dual_lp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.handin13.executor&quot;: &quot;Run&quot;,
-    &quot;Python.handin5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.kruskals_algorithm.executor&quot;: &quot;Run&quot;,
-    &quot;Python.maximum_flow.executor&quot;: &quot;Run&quot;,
-    &quot;Python.minimum_cost_flow.executor&quot;: &quot;Run&quot;,
-    &quot;Python.multiple_tsp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.prims_algorithm.executor&quot;: &quot;Run&quot;,
-    &quot;Python.set_covering_problem.executor&quot;: &quot;Run&quot;,
-    &quot;Python.shortest_path.executor&quot;: &quot;Run&quot;,
-    &quot;Python.symmetric_tsp_dfj.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tsp_mtz.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/thoma/Documents/AarhusUniversitet/Modellering og løsning af optimeringsproblemer/week06&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Doctests in pulp.executor": "Debug",
+    "Python.ATSP-LittleEtAl-Reduktion.executor": "Run",
+    "Python.BranchAndBoundATSP.executor": "Run",
+    "Python.CVRP-n15 (1).executor": "Run",
+    "Python.ColumnGeneration.executor": "Run",
+    "Python.CustomFunctions.executor": "Run",
+    "Python.CuttingStockColumnProblem.executor": "Run",
+    "Python.CuttingStockLowerBoundLP.executor": "Run",
+    "Python.CuttingStockWeakFormulation.executor": "Run",
+    "Python.Distribution1.executor": "Run",
+    "Python.Eks2025Opg3.executor": "Run",
+    "Python.EksOpg-MLOPT-Juni-2022-Opg1.executor": "Debug",
+    "Python.FactoryPlanning1.executor": "Run",
+    "Python.HELTAL-3.executor": "Run",
+    "Python.HELTAL-5.executor": "Run",
+    "Python.KortesteVejEks55 (1).executor": "Run",
+    "Python.LP-1_Mixing_Problem.executor": "Run",
+    "Python.LP-2.executor": "Run",
+    "Python.LP-3_Mixing_Problem.executor": "Run",
+    "Python.LP1.executor": "Run",
+    "Python.LP3.executor": "Run",
+    "Python.MTSP-n15.executor": "Run",
+    "Python.MinCostFlowEks54.executor": "Run",
+    "Python.NET2.executor": "Run",
+    "Python.OpencastMining.executor": "Run",
+    "Python.QAP-FacilityLayout.executor": "Run",
+    "Python.TransportEks52.executor": "Run",
+    "Python.branch_and_bound.executor": "Run",
+    "Python.critical_path_problem.executor": "Run",
+    "Python.cvrp_gavish_graves.executor": "Run",
+    "Python.cvrp_mtz.executor": "Run",
+    "Python.decentralisation1210.executor": "Run",
+    "Python.dual_lp.executor": "Run",
+    "Python.handin13.executor": "Run",
+    "Python.handin5.executor": "Run",
+    "Python.kruskals_algorithm.executor": "Run",
+    "Python.maximum_flow.executor": "Run",
+    "Python.minimum_cost_flow.executor": "Run",
+    "Python.multiple_tsp.executor": "Run",
+    "Python.prims_algorithm.executor": "Run",
+    "Python.set_covering_problem.executor": "Run",
+    "Python.shortest_path.executor": "Run",
+    "Python.symmetric_tsp_dfj.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.tsp_mtz.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/thoma/Documents/AarhusUniversitet/Modellering og løsning af optimeringsproblemer/week06",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\thoma\Documents\AarhusUniversitet\Modellering og løsning af optimeringsproblemer\week06" />
@@ -149,7 +161,7 @@
       <recent name="C:\Users\thoma\Documents\AarhusUniversitet\Modellering og løsning af optimeringsproblemer\week04" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.branch_and_bound">
+  <component name="RunManager" selected="Python.LP-3_Mixing_Problem">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="Modellering og løsning af optimeringsproblemer" />
       <option name="ENV_FILES" value="" />
@@ -173,33 +185,7 @@
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="EksOpg-MLOPT-Juni-2022-Opg1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Modellering og løsning af optimeringsproblemer" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.13 (Modellering og løsning af optimeringsproblemer)" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/EksOpg-MLOPT-Juni-2022-Opg1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="HELTAL-3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="LP-1_Mixing_Problem" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Optimering" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -208,14 +194,89 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week08" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Opgaver" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week08/HELTAL-3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Opgaver/LP-1_Mixing_Problem.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="LP-2_Mixing_Problem" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Optimering" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Opgaver" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="C:\Users\thoma\Documents\AarhusUniversitet\Modellering og løsning af optimeringsproblemer\Opgaver\LP-2_Mixing_Problem.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="LP-3_Mixing_Problem" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Optimering" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Opgaver" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Opgaver/LP-3_Mixing_Problem.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="LP1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Optimering" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week01" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week01/LP1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -249,32 +310,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="branch_and_bound" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Optimering" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/modeller" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/modeller/branch_and_bound.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="cvrp_mtz" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="cvrp_gavish_graves" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Optimering" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -290,7 +326,7 @@
       <option name="DEBUG_JUST_MY_CODE" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/modeller/tsp/cvrp_mtz.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/modeller/tsp/cvrp_gavish_graves.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -316,31 +352,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Databaser/Handins/handin5/handin5.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="multiple_tsp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Optimering" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/modeller/tsp" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/modeller/tsp/multiple_tsp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -460,11 +471,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.branch_and_bound" />
-        <item itemvalue="Python.HELTAL-3" />
-        <item itemvalue="Python.EksOpg-MLOPT-Juni-2022-Opg1" />
-        <item itemvalue="Python.multiple_tsp" />
-        <item itemvalue="Python.cvrp_mtz" />
+        <item itemvalue="Python.LP-3_Mixing_Problem" />
+        <item itemvalue="Python.LP-2_Mixing_Problem" />
+        <item itemvalue="Python.LP-1_Mixing_Problem" />
+        <item itemvalue="Python.LP1" />
+        <item itemvalue="Python.cvrp_gavish_graves" />
       </list>
     </recent_temporary>
   </component>
@@ -525,7 +536,9 @@
       <workItem from="1778858715901" duration="3334000" />
       <workItem from="1779700764007" duration="32099000" />
       <workItem from="1779878568463" duration="17238000" />
-      <workItem from="1779967345800" duration="17012000" />
+      <workItem from="1779967345800" duration="17748000" />
+      <workItem from="1780221773137" duration="9304000" />
+      <workItem from="1780398788423" duration="7266000" />
     </task>
     <servers />
   </component>
@@ -547,13 +560,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/modeller/branch_and_bound.py</url>
-          <line>75</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/modeller/branch_and_bound.py</url>
           <line>53</line>
           <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Opgaver/LP-3_Mixing_Problem.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
           <url>file://$PROJECT_DIR$/week13/Eks2022Opg1.ipynb</url>
@@ -565,47 +578,52 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Distribution1_py$HELTAL_3.coverage" NAME="HELTAL-3 Coverage Results" MODIFIED="1774368989046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week08" />
-    <SUITE FILE_PATH="coverage/Distribution1_py$OpencastMining.coverage" NAME="OpencastMining Coverage Results" MODIFIED="1773837396801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week07" />
-    <SUITE FILE_PATH="coverage/Distribution1_py$NET2.coverage" NAME="NET2 Coverage Results" MODIFIED="1774263070089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week04" />
-    <SUITE FILE_PATH="coverage/HELTAL_5_py$MTSP_n15.coverage" NAME="MTSP-n15 Coverage Results" MODIFIED="1778223596323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/HELTAL_5_py$EksOpg_MLOPT_Juni_2022_Opg1.coverage" NAME="EksOpg-MLOPT-Juni-2022-Opg1 Coverage Results" MODIFIED="1779963665105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$set_covering_problem.coverage" NAME="set_covering_problem Coverage Results" MODIFIED="1778678639589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller" />
-    <SUITE FILE_PATH="coverage/HELTAL_5_py$cvrp_mtz.coverage" NAME="cvrp_mtz Coverage Results" MODIFIED="1779870215364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller/tsp" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$cvrp_mtz.coverage" NAME="cvrp_mtz Coverage Results" MODIFIED="1780227229855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller/tsp" />
     <SUITE FILE_PATH="coverage/LP3_py$FactoryPlanning1.coverage" NAME="FactoryPlanning1 Coverage Results" MODIFIED="1771342434508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week03" />
-    <SUITE FILE_PATH="coverage/Distribution1_py$BranchAndBoundATSP.coverage" NAME="BranchAndBoundATSP Coverage Results" MODIFIED="1773410491673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week06" />
     <SUITE FILE_PATH="coverage/Distribution1_py$CuttingStockLowerBoundLP.coverage" NAME="CuttingStockLowerBoundLP Coverage Results" MODIFIED="1774355618032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week08" />
-    <SUITE FILE_PATH="coverage/HELTAL_5_py$Eks2025Opg3.coverage" NAME="Eks2025Opg3 Coverage Results" MODIFIED="1778840124009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week10" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$TransportEks52.coverage" NAME="TransportEks52 Coverage Results" MODIFIED="1777542129346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/Distribution1_py$HELTAL_5.coverage" NAME="HELTAL-5 Coverage Results" MODIFIED="1775639976030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week09" />
-    <SUITE FILE_PATH="coverage/LP3_py$Distribution1.coverage" NAME="Distribution1 Coverage Results" MODIFIED="1772714151870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week05" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$HELTAL_5.coverage" NAME="HELTAL-5 Coverage Results" MODIFIED="1778658242299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week09" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$dual_lp.coverage" NAME="dual_lp Coverage Results" MODIFIED="1779802594043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$MinCostFlowEks54.coverage" NAME="MinCostFlowEks54 Coverage Results" MODIFIED="1778746822586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/Distribution1_py$CustomFunctions.coverage" NAME="CustomFunctions Coverage Results" MODIFIED="1775640684436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$branch_and_bound.coverage" NAME="branch_and_bound Coverage Results" MODIFIED="1780051146813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$shortest_path.coverage" NAME="shortest_path Coverage Results" MODIFIED="1779704107510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller" />
-    <SUITE FILE_PATH="coverage/Distribution1_py$CuttingStockColumnProblem.coverage" NAME="CuttingStockColumnProblem Coverage Results" MODIFIED="1774368985219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week08" />
-    <SUITE FILE_PATH="coverage/HELTAL_5_py$multiple_tsp.coverage" NAME="multiple_tsp Coverage Results" MODIFIED="1779871125464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller/tsp" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$handin13.coverage" NAME="handin13 Coverage Results" MODIFIED="1778571491991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DatabaserHandin13temp" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$HELTAL_3.coverage" NAME="HELTAL-3 Coverage Results" MODIFIED="1779968425229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week08" />
-    <SUITE FILE_PATH="coverage/Optimering$LP3.coverage" NAME="LP3 Coverage Results" MODIFIED="1771330707623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week03" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$tsp_mtz.coverage" NAME="tsp_mtz Coverage Results" MODIFIED="1779868412416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller" />
-    <SUITE FILE_PATH="coverage/HELTAL_5_py$QAP_FacilityLayout.coverage" NAME="QAP-FacilityLayout Coverage Results" MODIFIED="1776184170195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$maximum_flow.coverage" NAME="maximum_flow Coverage Results" MODIFIED="1778750830101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$kruskals_algorithm.coverage" NAME="prims_algorithm Coverage Results" MODIFIED="1779702878829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$CVRP_n15__1_.coverage" NAME="CVRP-n15 (1) Coverage Results" MODIFIED="1779869795096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
+    <SUITE FILE_PATH="coverage/LP3_py$test.coverage" NAME="test Coverage Results" MODIFIED="1772192521322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$cvrp_gavish_graves.coverage" NAME="cvrp_gavish_graves Coverage Results" MODIFIED="1780227587559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller/tsp" />
+    <SUITE FILE_PATH="coverage/Distribution1_py$Distribution1.coverage" NAME="Distribution1 Coverage Results" MODIFIED="1772795620508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week05" />
+    <SUITE FILE_PATH="coverage/Distribution1_py$OpencastMining.coverage" NAME="OpencastMining Coverage Results" MODIFIED="1773837396801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week07" />
+    <SUITE FILE_PATH="coverage/Distribution1_py$NET2.coverage" NAME="NET2 Coverage Results" MODIFIED="1774263070089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week04" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$MTSP_n15.coverage" NAME="MTSP-n15 Coverage Results" MODIFIED="1778223596323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$EksOpg_MLOPT_Juni_2022_Opg1.coverage" NAME="EksOpg-MLOPT-Juni-2022-Opg1 Coverage Results" MODIFIED="1779963665105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$LP1.coverage" NAME="LP1 Coverage Results" MODIFIED="1780401255448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week01" />
+    <SUITE FILE_PATH="coverage/Distribution1_py$BranchAndBoundATSP.coverage" NAME="BranchAndBoundATSP Coverage Results" MODIFIED="1773410491673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week06" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$Eks2025Opg3.coverage" NAME="Eks2025Opg3 Coverage Results" MODIFIED="1778840124009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week10" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$LP_2.coverage" NAME="LP-2 Coverage Results" MODIFIED="1780402987839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Opgaver" />
+    <SUITE FILE_PATH="coverage/Distribution1_py$HELTAL_5.coverage" NAME="HELTAL-5 Coverage Results" MODIFIED="1775639976030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week09" />
+    <SUITE FILE_PATH="coverage/LP3_py$Distribution1.coverage" NAME="Distribution1 Coverage Results" MODIFIED="1772714151870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week05" />
+    <SUITE FILE_PATH="coverage/Distribution1_py$CuttingStockColumnProblem.coverage" NAME="CuttingStockColumnProblem Coverage Results" MODIFIED="1774368985219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week08" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$multiple_tsp.coverage" NAME="multiple_tsp Coverage Results" MODIFIED="1779871125464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller/tsp" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$LP_1_Mixing_Problem.coverage" NAME="LP-1_Mixing_Problem Coverage Results" MODIFIED="1780401810008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Opgaver" />
+    <SUITE FILE_PATH="coverage/Optimering$LP3.coverage" NAME="LP3 Coverage Results" MODIFIED="1771330707623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week03" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$QAP_FacilityLayout.coverage" NAME="QAP-FacilityLayout Coverage Results" MODIFIED="1776184170195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$KortesteVejEks55__1_.coverage" NAME="KortesteVejEks55 (1) Coverage Results" MODIFIED="1778747261856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/LP3_py$NET2.coverage" NAME="NET2 Coverage Results" MODIFIED="1772103496018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week03" />
     <SUITE FILE_PATH="coverage/Distribution1_py$ATSP_LittleEtAl_Reduktion.coverage" NAME="ATSP-LittleEtAl-Reduktion Coverage Results" MODIFIED="1773329100487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week06" />
     <SUITE FILE_PATH="coverage/Distribution1_py$CuttingStockWeakFormulation.coverage" NAME="CuttingStockWeakFormulation Coverage Results" MODIFIED="1774368513770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week08" />
-    <SUITE FILE_PATH="coverage/HELTAL_5_py$kruskals_algorithm.coverage" NAME="prims_algorithm Coverage Results" MODIFIED="1779702878829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller" />
-    <SUITE FILE_PATH="coverage/LP3_py$test.coverage" NAME="test Coverage Results" MODIFIED="1772192521322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/HELTAL_5_py$CVRP_n15__1_.coverage" NAME="CVRP-n15 (1) Coverage Results" MODIFIED="1779869795096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
+    <SUITE FILE_PATH="coverage/HELTAL_5_py$LP_3_Mixing_Problem.coverage" NAME="LP-3_Mixing_Problem Coverage Results" MODIFIED="1780405659615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Opgaver" />
     <SUITE FILE_PATH="coverage/Distribution1_py$ColumnGeneration.coverage" NAME="ColumnGeneration Coverage Results" MODIFIED="1774355111702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week08" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$symmetric_tsp_dfj.coverage" NAME="symmetric_tsp_dfj Coverage Results" MODIFIED="1779805216739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$decentralisation1210.coverage" NAME="decentralisation1210 Coverage Results" MODIFIED="1778840232944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week14" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$critical_path_problem.coverage" NAME="critical_path_problem Coverage Results" MODIFIED="1778786685486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller" />
     <SUITE FILE_PATH="coverage/LP3_py$CustomFunctions.coverage" NAME="CustomFunctions Coverage Results" MODIFIED="1772704771696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$Doctests_in_pulp.coverage" NAME="Doctests in pulp Coverage Results" MODIFIED="1779787847835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/pulp" />
-    <SUITE FILE_PATH="coverage/Distribution1_py$Distribution1.coverage" NAME="Distribution1 Coverage Results" MODIFIED="1772795620508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/week05" />
     <SUITE FILE_PATH="coverage/HELTAL_5_py$minimum_cost_flow.coverage" NAME="minimum_cost_flow Coverage Results" MODIFIED="1778859227852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modeller" />
   </component>
   <component name="github-copilot-workspace">
