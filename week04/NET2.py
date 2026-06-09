@@ -2,12 +2,12 @@ import pulp as PLP
 from CustomFunctions import construct_constraints
 from CustomFunctions import print_solution
 
-h = [10.3, 11.1, 11.2, 11.9, 12.1, 12.2, 13.4, 15.2, 16.1, 16.7, 17.1, 17.2,
+h = [0.0, 10.3, 11.1, 11.2, 11.9, 12.1, 12.2, 13.4, 15.2, 16.1, 16.7, 17.1, 17.2,
      17.5, 18.4, 19.5, 20.1, 22.1, 23.7, 25.8, 26.4, 27.1, 28.2]
-N = range(len(h) + 1)
+N = range(len(h))
 increments = [3,4]
 connections = [(j, j + i) for j in N for i in increments if j + i < len(N)]
-costs = [(h[j - 1] - h[i])/(j - i) for (i, j) in connections]
+costs = [h[j] - h[i + 1] for (i, j) in connections]
 
 start = 0
 target = len(N) - 1

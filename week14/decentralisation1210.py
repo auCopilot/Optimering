@@ -1,4 +1,4 @@
-from modeller.quadtratic_assignment_problem import QuadraticAssignmentProblem
+from modeller.heltalsmodeller.quadtratic_assignment_problem import QuadraticAssignmentProblem
 import numpy as np
 import pulp as PLP
 # We have n = 5 factories and only 3 location, however, we can still solve the problem by letting locations have more

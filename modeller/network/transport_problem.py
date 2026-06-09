@@ -13,7 +13,7 @@ class TransportProblem:
         self.demand_surplus = False
         self.supply_surplus = False
         self.balanced = False
-
+        self.constraints = "NOT ADDED"
 
         # Check if problem is valid
         if sum(self.capacities) < sum(self.demands):
@@ -45,15 +45,16 @@ class TransportProblem:
         self.model = PLP.LpProblem( name = self.name, sense = PLP.LpMinimize)
         # Decision variables
         self.x = PLP.LpVariable.dicts( name = "x", indices= (self.supplier_range, self.demands_range), lowBound= 0)
-        # Objective
-        self.model += PLP.lpSum(self.cost_matrix[i][j] * self.x[i][j]
-                                         for i in self.supplier_range
-                                         for j in self.demands_range), "Objective"
-        self.construct_constraints()
+
+
 
 
 
     def construct_constraints(self):
+        # Objective
+        self.model += PLP.lpSum(self.cost_matrix[i][j] * self.x[i][j]
+                                for i in self.supplier_range
+                                for j in self.demands_range), "Objective"
         # We must be able to supply
         for i in self.supplier_range:
             self.model += PLP.lpSum(self.x[i][j] for j in self.demands_range) <= self.capacities[i], f"Capacities{i}"
@@ -61,6 +62,7 @@ class TransportProblem:
         for j in self.demands_range:
             self.model += PLP.lpSum(self.x[i][j] for i in self.supplier_range) == self.demands[j], f"Demands{j}"
         # Non-negativity is enforced in variable definition
+        self.constraints = "ADDED"
 
     def add_dummy(self):
         # Adds dummy according to surplus
@@ -83,7 +85,9 @@ class TransportProblem:
             self.cost_matrix = np.hstack((self.cost_matrix, np.zeros((self.m, 1))))
 
     def solve(self, quiet = True, postive_variables_only = True):
-
+        if self.constraints != "ADDED":
+            raise ValueError("You must add the constraint before solving")
+        self.constraints = "NOT ADDED"
         # Solve quietly
         print()
         self.model.solve(PLP.PULP_CBC_CMD(msg = 0 if quiet else 1))
@@ -130,8 +134,8 @@ class TransportProblem:
         for i in self.supplier_range:
             for j in self.demands_range:
                 amount = self.x[i][j].varValue
-
                 unit_cost = self.cost_matrix[i][j]
+
                 route_cost = amount * unit_cost
                 total_calculated_cost += route_cost
                 if not self.balanced:

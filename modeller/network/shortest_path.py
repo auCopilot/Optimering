@@ -32,9 +32,9 @@ class shortest_path:
 
         # Objective
         if type(self.cost) is not dict:
-            self.model += PLP.lpSum(cost[k] * self.x[e] for k, e in enumerate(self.edges)), "Objective"
+            self.model += PLP.lpSum(self.cost[k] * self.x[e] for k, e in enumerate(self.edges)), "Objective"
         if type(self.cost) is dict:
-            self.model += PLP.lpSum(cost[e] * self.x[e] for e in self.edges), "Objective"
+            self.model += PLP.lpSum(self.cost[e] * self.x[e] for e in self.edges), "Objective"
 
 
     def construct_constraints(self):
@@ -51,7 +51,6 @@ class shortest_path:
                                f"Balance_Constraint_{node}")
 
     def solve_and_print(self):
-        self.construct_constraints()
         self.model.solve()
 
         print("Status:", PLP.LpStatus[self.model.status])

@@ -43,7 +43,8 @@ def dual_lp(model, var_bounds, quiet = True):
 
     Input:
     primal linear problem model
-    var bounds - e.g if x1 >= 0 and x2 <= 0 and x3 is free, then var_bounds = [">=", "<=", None], postive, negative, free.
+    var bounds - e.g if x1 >= 0 and x2 <= 0 and x3 is free, then var_bounds = [">=", "<=", None], positive, negative, free.
+    Note if you get a key error, then remember to have to add zero coefficient variables explicitly
     """
     # -1 for max in original problem -> minimize dual
     #  1 for min in original problem -> maximize dual
@@ -92,15 +93,19 @@ def dual_lp(model, var_bounds, quiet = True):
         # RHS
         rhs = -c.constant
         # Sense
-        print(c.sense)
         # lhs <= c_i
         if c.sense == -1:
-            y = PLP.LpVariable(f"y{i}", lowBound=0)
+            y = PLP.LpVariable(f"y{i}",
+                               lowBound= 0 if sense == "MAX" else None,
+                               upBound= 0 if sense == "MIN" else None,
+                            )
             # print("  sense = <=")
             term = y * rhs
         # lhs >= c_i
         elif c.sense == 1:
-            y = PLP.LpVariable(f"y{i}", upBound=0)
+            y = PLP.LpVariable(f"y{i}",
+                               upBound=0 if sense == "MAX" else None,
+                               lowBound=0 if sense == "MIN" else None)
             # print("  sense = >=")
             term = y * rhs
         # lhs == c_i

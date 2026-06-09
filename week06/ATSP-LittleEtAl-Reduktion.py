@@ -11,7 +11,14 @@ C = NP.array([[M, M, M, M, M, M, M],
               [M,21,16,25, M,18,18],
               [M,12,46,27,48, M, 5],
               [M,23, 5, 5, 9, 5, M]])
-
+C = NP.array([
+    [M, M, M , M , M, M],
+    [M, M,  4,  9, 13,  7],
+    [M,14, M, 12,  8,  5],
+    [M,10, 18, M, 18, 17],
+    [M,11, 16,  8, M, 15],
+    [M, 3,  5,  2, 20, M]
+])
 
 print("Oprindelig matrix:")
 print(C)
@@ -23,11 +30,8 @@ PunktRange = range(1,n+1) # 1..6
 # ArcsFixedIn = [(1,4),(2,1),(5,6)]
 # ArcsFixedOut = [(3,5)]
 
-ArcsFixedIn = [(1,4)] #Her angives de kanter, som via
-# branching er
-# tvunget
-# med i
-                # løsningen
+ArcsFixedIn = [] #Her angives de kanter, som via branching er tvunget med i løsningen
+
 ArcsFixedOut = [] #Her angives de kanter, som via branching ikke må indgå i løsningen
 
 print("\nFixedIn: ",ArcsFixedIn)

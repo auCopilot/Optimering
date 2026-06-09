@@ -18,7 +18,6 @@ class clustering_from_shortest_path(shortest_path):
         super().__init__(nodes, edges, cost, start_node, end_node)
 
     def solve_and_print(self):
-        self.construct_constraints()
         self.model.solve()
 
         print("Status:", PLP.LpStatus[self.model.status])

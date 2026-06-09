@@ -37,7 +37,7 @@ assignment_problem.solve()
 Vi betragter nu en situation hvor kun kigger på inter-transit flow,
 og ønsker at minimere det vægtede flow mellem gates. Dette er et QAP problem.
 """
-from modeller.quadtratic_assignment_problem import QuadraticAssignmentProblem
+from modeller.heltalsmodeller.quadtratic_assignment_problem import QuadraticAssignmentProblem
 
 distances = np.array([[0, 150, 200, 250, 400, 500],
                       [150, 0, 50, 100, 250, 350],

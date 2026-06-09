@@ -1,34 +1,7 @@
-import numpy as np
+import  numpy as np
 
-
-c = np.array([[ 9999,27,43,16,30,26],
-              [ 7, 9999,16, 1,30,25],
-              [20,13, 9999,35, 5, 0],
-              [21,16,25, 9999,18,18],
-              [12,46,27,48, 9999, 5],
-              [23, 5, 5, 9, 5, 9999]]).astype(float)
-
-
-c = np.array([
-    [9999, 12, 10, 19, 8, 11],
-    [7, 9999, 6, 15, 9, 12],
-    [8, 9, 9999, 7, 14, 10],
-    [14, 6, 12, 9999, 11, 13],
-    [10, 8, 9, 6, 9999, 7],
-    [11, 13, 5, 8, 6, 9999]
-]).astype(float)
+ScenarieNr = 1
 M = 9999
-c = np.array([
-    [M,  4,  9, 13,  7],
-    [14, M, 12,  8,  5],
-    [10, 18, M, 18, 17],
-    [11, 16,  8, M, 15],
-    [ 3,  5,  2, 20, M]
-]).astype(float)
-
-
-ScenarieNr = 3
-
 if ScenarieNr == 1:
     n = 5
     c = [
@@ -274,18 +247,3 @@ def branch_and_bound_atsp(cost, included_edges, excluded_edges, lower_bound,
 
 branch_and_bound_atsp(c,None, None, 0, depth=1, best_lower_bound=[np.inf],
                       p=[0])
-
-import itertools
-n = len(c)
-best_cost = float('inf')
-best_route = None
-
-for perm in itertools.permutations(range(1, n)):
-    route = (0,) + perm + (0,)
-    total = sum(c[route[i]][route[i + 1]] for i in range(n))
-
-    if total < best_cost:
-        best_cost = total
-        best_route = route
-
-print(best_route, best_cost)
