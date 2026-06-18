@@ -29,14 +29,18 @@ class set_covering_problem:
 
         # Add objective
         self.model += PLP.lpSum(self.costs[j] * self.delta[j] for j in range(self.n)), "Objective"
+        self.constraints = "NOT ADDED"
 
 
-    def define_constraints(self):
+    def construct_constraints(self):
         for i in range(self.m):
-            self.model += PLP.lpSum(self.adj_matrix[i][j]*self.delta[j] for j in range(self.n)) >= self.weights[i], f"Subset_Constraint_{i}"
+            self.model += PLP.lpSum(self.adj_matrix[i][j]*self.delta[j]
+                                    for j in range(self.n)) >= self.weights[i], f"Subset_Constraint_{i}"
+        self.constraints = "ADDED"
 
-    def solve_and_print(self, one_indexed = True, quiet = True):
-        self.define_constraints()
+    def solve_and_print(self, quiet = True):
+        if self.constraints != "ADDED":
+            raise ValueError("You must add the constraints before solving")
         eps = 0.01
         self.model.solve(PLP.PULP_CBC_CMD(msg=0 if quiet else 1))
         print("Status:", PLP.LpStatus[self.model.status])
@@ -177,7 +181,8 @@ if __name__ == "__main__":
     costs = [1] * len(possible_coordinates)
 
     SCP = set_covering_problem(adj_matrix, weights, costs, possible_coordinates)
-    SCP.solve_and_print(one_indexed = True, quiet = True)
+    SCP.construct_constraints()
+    SCP.solve_and_print(quiet = True)
 
     SCP.plot_solution(
         element_coordinates=city_coordinates,

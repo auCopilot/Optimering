@@ -2,7 +2,6 @@ import pulp as PLP
 import numpy as np
 from math import ceil, floor
 import copy
-from pyexpat import model
 
 def branch_and_bound(LPmodel, sense, best_so_far = [None], objectives = [None], problem = [0]):
 
@@ -107,7 +106,7 @@ def branch_and_bound(LPmodel, sense, best_so_far = [None], objectives = [None], 
     # Right branch
     right_model = copy.deepcopy(LPmodel)
     right_model += right_model.variablesDict()[branch_name] >= ceil(branch_value)
-    print("Adding constraint ", branch_name, " >= ", ceil(branch_value), " to left branch")
+    print("Adding constraint ", branch_name, " >= ", ceil(branch_value), " to right branch")
     print()
     problem[0] = problem[0] + 1
     branch_and_bound(right_model, sense, best_so_far, objectives, problem)

@@ -7,7 +7,8 @@ def stordriftsfordele(model, new_objective, price_intervals, costs_of_interval):
     :param model: ILP model from a class wrapper
     :param price_intervals: Should start at [0, a, b, M] where M is a very large number, i.e price remains the same.
     :param costs_of_interval: [0, c, d, e] Should contain zero for proper indexing
-    :return: ILP model where stordriftsfordele is implemented.
+    :return: ILP model where stordriftsfordele is implemented by including the piecewise linear function as an
+    constraint and objective.
     NOTE YOU HAVE TO ADD A CONSTRAINT ON THE SUPPLIER / COSTUMER IN QUESTION AFTER THIS FUNCTION IS CALLED.
     EXAMPLE FROM opg 1 Eks 2022:
 
@@ -20,7 +21,8 @@ def stordriftsfordele(model, new_objective, price_intervals, costs_of_interval):
 
     tpLarge = TransportProblem(cost_matrix, capacities, demands)
     from modeller.heltalsmodeller.stordriftsfordele import stordriftsfordele
-    # price intervals
+    # price intervals:return: ILP model where stordriftsfordele is implemented by including the piecewise linear function as an
+    #     constraint and objective
     price_intervals = [0, 100, 150, 225]
     # costs
     costs_of_interval = [0, 4, 3, 2]

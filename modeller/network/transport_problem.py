@@ -87,7 +87,6 @@ class TransportProblem:
     def solve(self, quiet = True, postive_variables_only = True):
         if self.constraints != "ADDED":
             raise ValueError("You must add the constraint before solving")
-        self.constraints = "NOT ADDED"
         # Solve quietly
         print()
         self.model.solve(PLP.PULP_CBC_CMD(msg = 0 if quiet else 1))
@@ -138,24 +137,25 @@ class TransportProblem:
 
                 route_cost = amount * unit_cost
                 total_calculated_cost += route_cost
-                if not self.balanced:
-                    if self.supply_surplus:
-                        if j != self.dummy_index:
-                            print(f"Supplier {i + idx} sends {amount} units to Customer {j + idx} "
-                                  f"| Unit Cost: {unit_cost} | Route Cost: {route_cost}")
-                        else:
-                            print(f"Supplier {i + idx} sends {amount} units to Dummy Customer {j + idx} "
-                                  f"| Unit Cost: {unit_cost} | Route Cost: {route_cost}")
-                    if self.demand_surplus:
-                        if i != self.dummy_index:
-                            print(f"Supplier {i + idx} sends {amount} units to Customer {j + idx} "
-                                  f"| Unit Cost: {unit_cost} | Route Cost: {route_cost}")
-                        else:
-                            print(f"Dummy Supplier {i + idx} sends {amount} units to Customer {j + idx} "
-                                  f"| Unit Cost: {unit_cost} | Route Cost: {route_cost}")
-                else:
-                    print(f"Supplier {i + idx} sends {amount} units to Customer {j + idx} "
-                          f"| Unit Cost: {unit_cost} | Route Cost: {route_cost}")
+                if route_cost > epsilon:
+                    if not self.balanced:
+                        if self.supply_surplus:
+                            if j != self.dummy_index:
+                                print(f"Supplier {i + idx} sends {amount} units to Customer {j + idx} "
+                                      f"| Unit Cost: {unit_cost} | Route Cost: {route_cost}")
+                            else:
+                                print(f"Supplier {i + idx} sends {amount} units to Dummy Customer {j + idx} "
+                                      f"| Unit Cost: {unit_cost} | Route Cost: {route_cost}")
+                        if self.demand_surplus:
+                            if i != self.dummy_index:
+                                print(f"Supplier {i + idx} sends {amount} units to Customer {j + idx} "
+                                      f"| Unit Cost: {unit_cost} | Route Cost: {route_cost}")
+                            else:
+                                print(f"Dummy Supplier {i + idx} sends {amount} units to Customer {j + idx} "
+                                      f"| Unit Cost: {unit_cost} | Route Cost: {route_cost}")
+                    else:
+                        print(f"Supplier {i + idx} sends {amount} units to Customer {j + idx} "
+                              f"| Unit Cost: {unit_cost} | Route Cost: {route_cost}")
 
         print("-" * 31)
         # Model objective

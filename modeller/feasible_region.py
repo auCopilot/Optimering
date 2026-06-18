@@ -266,6 +266,9 @@ class LPFeasibleRegionPlotter:
                 )
 
         # Styling
+        ax.set_xticks(range(int(self.x1_bounds[0]), int(self.x1_bounds[1]) + 1))
+        ax.set_yticks(range(int(self.x2_bounds[0]), int(self.x2_bounds[1]) + 1))
+        ax.grid(True)
         ax.set_xlim(self.x1_bounds)
         ax.set_ylim(self.x2_bounds)
         ax.set_xlabel("$x_1$")
