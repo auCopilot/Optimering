@@ -113,14 +113,16 @@ class cvrp_gavish_graves:
         ):
             if self.x[(i, j)].varValue > 0 + eps:
                 # Track positioning
-                u_step = int((self.u[i].varValue if self.u[i].varValue is not None else -1) + (1 if one_indexed else 0))
+                f_step = int((self.f[(i, j)].varValue
+                              if self.f[(i, j)].varValue is not None else -1)
+                             + ( 1 if one_indexed else 0))
                 # Bool to check if depot
                 dep_or_vertex = f"vertex_{j + (1 if one_indexed else 0)}" if j != 0 else "Depot"
                 print(
                     f"Arc ({i + (1 if one_indexed else 0)}, {j + (1 if one_indexed else 0)})"
                     f" is used in the solution with cost {round(self.cost_matrix[i][j], 2)},"
                     f" {dep_or_vertex} is visited as the "
-                    f"{u_step}"
+                    f"{f_step}"
                     f" th vertex in the route\n"
                 )
         print("Total cost:", PLP.value(self.model.objective))

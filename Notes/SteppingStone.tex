@@ -1,0 +1,4 @@
+Following Week 8 on the Stepping Stone method and Vogel’s approximation, the stepping stone algorithm can be applied to an initial solution of the transportation problem, for example one obtained using the North-West Corner method. We then evaluate the unused edges in the initial solution to determine whether allocating goods along these edges yields a positive saving per unit.
+
+If a positive saving exists, we allocate as many goods as possible to the selected edge by transferring capacity from currently used routes to alternative feasible routes. This process is repeated until the improving edge can no longer provide additional feasible allocation. We repeat this process until no new edges can be found with at postive saving
+and we have thus arrived at an optimal solution.

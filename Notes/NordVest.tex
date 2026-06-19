@@ -1,0 +1,13 @@
+Following uge 8 "Stepping Stone metoden og Vogel’s approksimation": The Northwest Corner Rule is a method used to obtain an initial feasible solution to a transportation problem.
+
+The idea is to start with the first supplier and the first customer, which corresponds to the top-left (northwest) corner of the transportation table.
+
+Allocate as many units as possible from the current supplier to the current customer.
+
+If the supplier's available supply is exhausted, move down to the next supplier. If the customer's demand is completely satisfied, move to the next customer on the right.
+
+Continue this process, always allocating as much as possible between the current supply and demand, until all supply has been distributed and all demand has been satisfied.
+
+The method focuses only on matching supply and demand in a systematic way and does not take transportation costs into account.
+
+Its purpose is to quickly generate a feasible starting solution that can later be improved using optimization methods.

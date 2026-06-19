@@ -1,0 +1,12 @@
+\subsection{Vogel's Approximation}
+We can use vogels aproximation, it works in the following way, following uge 8 "Stepping Stone metoden og Vogel’s approksimation":
+
+In Vogel’s Approximation Method, an edge is selected iteratively and then assigned as much flow as possible.
+
+The edge is chosen as the least-cost edge in a row or column for which the difference between the cheapest and the second-cheapest cost in that row or column is maximal. This is done such that we save the maximal amount by choosing the cheapest edge to the fullest extend possible
+
+The value (flow) assigned to the edge is the maximum possible amount, determined by the supplier’s remaining capacity and the customer’s remaining demand (i.e., the minimum of the two).
+
+Since in each iteration either a remaining supply or a remaining demand is reduced to zero, there can be at most n+m−1 iterations in a balanced transportation problem.
+
+According to the pseudocode, however, there are no further choices to make once only a single supplier or a single customer remains. This situation occurs after at most n+m−3 iterations.

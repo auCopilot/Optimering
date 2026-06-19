@@ -13,7 +13,7 @@ class set_covering_problem:
     requiring 1 or more subsets to cover the element, thus weights[i] = 1 means that the i'th element must be covered by
     at least one subset, weights[i] = 2 means that the i'th element must be covered by at least two subsets, and so on.
 
-    costs: A list of length n, where costs[j] is the cost of including the j'th subset in the solution.
+    costs: A list of length m, where costs[i] is the cost of including the i'th element in the solution.
 
     F: the Famlily of possible subsets
     """
