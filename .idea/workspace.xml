@@ -8,62 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4a313a9-63c5-4249-86cc-c22776b7089f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/modeller/Semester Work/week11/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modeller/Semester Work/week12/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modeller/Semester Work/week13/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modeller/Semester Work/week14/.gitkeep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notes/OptimeringNoter.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Notes/OptimeringNoter.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OldExams/Exam2022.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/OldExams/Exam2022.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modeller/set_covering_problem.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/set_covering_problem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modeller/tsp/cvrp_gavish_graves.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/tsp/cvrp_gavish_graves.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week01/LP1.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week01/LP1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week01/PorblemsUge1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week01/PorblemsUge1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week01/PorblemsUge1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week01/PorblemsUge1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week02/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/Notes/CoverInequalities.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week02/FoodManufacture1.lp" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week02/FoodManufacture1.lp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week02/FoodManufacture1.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week02/FoodManufacture1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week02/LP2.lp" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week02/LP2.lp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week02/LP2.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week02/LP2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week02/Problems02.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week02/Problems02.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week02/Problems02.tex" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week02/Problems02.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week03/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/Notes/NordVest.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week03/FactoryPlanning1.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week03/FactoryPlanning1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week03/LP3.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week03/LP3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week04/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/Notes/SteppingStone.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week04/NET2.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week04/NET2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week05/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/Notes/Vogels.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week05/Distribution1.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week05/Distribution1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week06/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week02/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week06/ATSP-LittleEtAl-Reduktion.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week06/ATSP-LittleEtAl-Reduktion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week06/ATSP-MTZ-TSPEksFraLittleEtAl.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week06/ATSP-MTZ-TSPEksFraLittleEtAl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week06/BranchAndBoundATSP.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week06/BranchAndBoundATSP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week06/HELTAL1.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week06/HELTAL1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week07/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week03/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week07/OpencastMining.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week07/OpencastMining.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week08 - cutting stock/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week04/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week08 - cutting stock/CuttingStockColumnProblem.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week08 - cutting stock/CuttingStockColumnProblem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week08 - cutting stock/CuttingStockLowerBoundLP.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week08 - cutting stock/CuttingStockLowerBoundLP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week08 - cutting stock/CuttingStockMasterLP.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week08 - cutting stock/CuttingStockMasterLP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week08 - cutting stock/CuttingStockWeakFormulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week08 - cutting stock/CuttingStockWeakFormulation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week08 - cutting stock/HELTAL-3.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week08 - cutting stock/HELTAL-3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week08 - cutting stock/KnapSack.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week08 - cutting stock/KnapSack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week09/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week05/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week09/Eksamen2021Opgave2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week09/Eksamen2021Opgave2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week09/Eksamen2021Opgave2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week09/Eksamen2021Opgave2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week09/HELTAL-5.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week09/HELTAL-5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week09/tree.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week09/tree.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week10/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week06/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week10/Eks2025Opg3.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week10/Eks2025Opg3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week11/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week07/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week12/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week08 - cutting stock/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week12/Eks2021Opg3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week12/Eks2021Opg3.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week12/Eks2021Opg3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week12/Eks2021Opg3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week13/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week09/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week13/Eks2022Opg1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week13/Eks2022Opg1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week14/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week10/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week14/Eks2024opg3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week14/Eks2024opg3.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week14/decentralisation1210.py" beforeDir="false" afterPath="$PROJECT_DIR$/modeller/Semester Work/week14/decentralisation1210.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -604,7 +549,7 @@
       <workItem from="1781537474043" duration="4780000" />
       <workItem from="1781685826671" duration="4177000" />
       <workItem from="1781690043624" duration="7272000" />
-      <workItem from="1781768810494" duration="16187000" />
+      <workItem from="1781768810494" duration="17286000" />
     </task>
     <servers />
   </component>
