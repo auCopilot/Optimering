@@ -1,0 +1,14 @@
+From "Lifted Cover Inequalities: Padberg’s procedure" and "Heltalsmodeller" Uge 13.
+
+Let variables $\delta_i \in \{0,1\}$, and coeffcients $a_i \in \mathbb{N}$ $i = 1...n$
+
+and assume that we are looking at a knapsack inequality, that is, an inequality on the form:
+
+$$\sum_{i=1}^n a_i\delta_i \leq a_0$$
+We then define that $S \subseteq \{1,2, \dots, n\}$ and let $a(S) = \sum_{j \in S} a_j$. Then a cover is defined as a set $S$ such that $a(S) > a_0$. A cover inequality is then defined as:
+$$\sum_{j \in S} \delta_j \leq |S| - 1$$
+A minimal cover is then defined as a cover such that for all $i \in S$ we have that $a(S \setminus \{i\}) \leq a_0$. That is, we cannot remove any one element from the cover without it ceasing to be a cover.
+
+We can build an extended cover inequality from a minimal cover $S$. We let $a^* = max(a_j \in S)$. Then without changing the right hands side of the corresponding minimal cover inequality induced by $S$, we can add $\delta_k$ variables where $k \notin S$ to the left hand side if and only if $a_k \geq a^*$.
+
+Generally, cover inequalities help us improve the bounds in LP-relaxations for solving ILP,s this could be in methods such as branch and bound.
