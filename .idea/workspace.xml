@@ -8,11 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4a313a9-63c5-4249-86cc-c22776b7089f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Optimering.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Optimering.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notes/CoverInequalities.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Notes/CoverInequalities.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OldExams/ExamTemplate2026.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OldExams/Exam2025.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/OldExams/Exam2025.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,12 +48,12 @@
     &quot;assignee&quot;: &quot;auCopilot&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/auCopilot/Optimering.git&quot;,
-    &quot;accountId&quot;: &quot;4ba17590-0e71-43b0-8818-5e7b5efe2dd0&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/auCopilot/Optimering.git",
+    "accountId": "6cdd902a-b09d-4cf1-a0fa-98a75c97bc8b"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/modeller/shortest_path.py" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -72,85 +69,85 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python tests.Doctests in pulp.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.ATSP-LittleEtAl-Reduktion.executor&quot;: &quot;Run&quot;,
-    &quot;Python.BranchAndBoundATSP.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CDAP.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CVRP-n15 (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.ColumnGeneration.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CustomFunctions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CuttingStockColumnProblem.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CuttingStockLowerBoundLP.executor&quot;: &quot;Run&quot;,
-    &quot;Python.CuttingStockWeakFormulation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Distribution1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Eks2025Opg3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EksOpg-MLOPT-Juni-2022-Opg1.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.FactoryPlanning1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HELTAL-1-ATSP-MTZ (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.HELTAL-1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HELTAL-3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HELTAL-5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.KortesteVejEks55 (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.LP-1_Mixing_Problem.executor&quot;: &quot;Run&quot;,
-    &quot;Python.LP-2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.LP-3_Mixing_Problem.executor&quot;: &quot;Run&quot;,
-    &quot;Python.LP-6_Production_Planning.executor&quot;: &quot;Run&quot;,
-    &quot;Python.LP-7_Production_Planning.executor&quot;: &quot;Run&quot;,
-    &quot;Python.LP1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.LP3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.LP5-Visual.executor&quot;: &quot;Run&quot;,
-    &quot;Python.LP5-Visual_Dual_LP.executor&quot;: &quot;Run&quot;,
-    &quot;Python.MTSP-n15.executor&quot;: &quot;Run&quot;,
-    &quot;Python.MinCostFlowEks54.executor&quot;: &quot;Run&quot;,
-    &quot;Python.NET-1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.NET-2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.NET2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.OpencastMining.executor&quot;: &quot;Run&quot;,
-    &quot;Python.QAP-FacilityLayout.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TransportEks52.executor&quot;: &quot;Run&quot;,
-    &quot;Python.branch_and_bound.executor&quot;: &quot;Run&quot;,
-    &quot;Python.critical_path_problem.executor&quot;: &quot;Run&quot;,
-    &quot;Python.crossdocking.executor&quot;: &quot;Run&quot;,
-    &quot;Python.crossdocking_local_search.executor&quot;: &quot;Run&quot;,
-    &quot;Python.cvrp_gavish_graves.executor&quot;: &quot;Run&quot;,
-    &quot;Python.cvrp_mtz.executor&quot;: &quot;Run&quot;,
-    &quot;Python.decentralisation1210.executor&quot;: &quot;Run&quot;,
-    &quot;Python.dual_lp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.handin13.executor&quot;: &quot;Run&quot;,
-    &quot;Python.handin5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.kruskals_algorithm.executor&quot;: &quot;Run&quot;,
-    &quot;Python.maximum_flow.executor&quot;: &quot;Run&quot;,
-    &quot;Python.minimum_cost_flow.executor&quot;: &quot;Run&quot;,
-    &quot;Python.multiple_tsp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.prims_algorithm.executor&quot;: &quot;Run&quot;,
-    &quot;Python.set_covering_problem.executor&quot;: &quot;Run&quot;,
-    &quot;Python.shortest_path.executor&quot;: &quot;Run&quot;,
-    &quot;Python.symmetric_tsp_dfj.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tsp_mtz.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tsc/Documents/AarhusUniversitet/Optimering/OldExams&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Doctests in pulp.executor": "Debug",
+    "Python.ATSP-LittleEtAl-Reduktion.executor": "Run",
+    "Python.BranchAndBoundATSP.executor": "Run",
+    "Python.CDAP.executor": "Run",
+    "Python.CVRP-n15 (1).executor": "Run",
+    "Python.ColumnGeneration.executor": "Run",
+    "Python.CustomFunctions.executor": "Run",
+    "Python.CuttingStockColumnProblem.executor": "Run",
+    "Python.CuttingStockLowerBoundLP.executor": "Run",
+    "Python.CuttingStockWeakFormulation.executor": "Run",
+    "Python.Distribution1.executor": "Run",
+    "Python.Eks2025Opg3.executor": "Run",
+    "Python.EksOpg-MLOPT-Juni-2022-Opg1.executor": "Debug",
+    "Python.FactoryPlanning1.executor": "Run",
+    "Python.HELTAL-1-ATSP-MTZ (1).executor": "Run",
+    "Python.HELTAL-1.executor": "Run",
+    "Python.HELTAL-3.executor": "Run",
+    "Python.HELTAL-5.executor": "Run",
+    "Python.KortesteVejEks55 (1).executor": "Run",
+    "Python.LP-1_Mixing_Problem.executor": "Run",
+    "Python.LP-2.executor": "Run",
+    "Python.LP-3_Mixing_Problem.executor": "Run",
+    "Python.LP-6_Production_Planning.executor": "Run",
+    "Python.LP-7_Production_Planning.executor": "Run",
+    "Python.LP1.executor": "Run",
+    "Python.LP3.executor": "Run",
+    "Python.LP5-Visual.executor": "Run",
+    "Python.LP5-Visual_Dual_LP.executor": "Run",
+    "Python.MTSP-n15.executor": "Run",
+    "Python.MinCostFlowEks54.executor": "Run",
+    "Python.NET-1.executor": "Run",
+    "Python.NET-2.executor": "Run",
+    "Python.NET2.executor": "Run",
+    "Python.OpencastMining.executor": "Run",
+    "Python.QAP-FacilityLayout.executor": "Run",
+    "Python.TransportEks52.executor": "Run",
+    "Python.branch_and_bound.executor": "Run",
+    "Python.critical_path_problem.executor": "Run",
+    "Python.crossdocking.executor": "Run",
+    "Python.crossdocking_local_search.executor": "Run",
+    "Python.cvrp_gavish_graves.executor": "Run",
+    "Python.cvrp_mtz.executor": "Run",
+    "Python.decentralisation1210.executor": "Run",
+    "Python.dual_lp.executor": "Run",
+    "Python.handin13.executor": "Run",
+    "Python.handin5.executor": "Run",
+    "Python.kruskals_algorithm.executor": "Run",
+    "Python.maximum_flow.executor": "Run",
+    "Python.minimum_cost_flow.executor": "Run",
+    "Python.multiple_tsp.executor": "Run",
+    "Python.prims_algorithm.executor": "Run",
+    "Python.set_covering_problem.executor": "Run",
+    "Python.shortest_path.executor": "Run",
+    "Python.symmetric_tsp_dfj.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.tsp_mtz.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/tsc/Documents/AarhusUniversitet/Optimering/OldExams",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\tsc\Documents\AarhusUniversitet\Optimering\OldExams" />
